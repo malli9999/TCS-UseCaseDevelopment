@@ -4,18 +4,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-
 import io.usecase.account.DemoAccountModel;
 import io.usecase.account.DemoAccountRepository;
 import io.usecase.rewards.DemoRewardsModel;
@@ -25,7 +21,7 @@ import io.usecase.transaction.DemoTransactionRepository;
 
 
 @SpringBootApplication
-//@EnableEurekaClient
+@EnableEurekaClient
 public class TrainingProgramAccountApplication {
 	
 	
@@ -75,7 +71,7 @@ public class TrainingProgramAccountApplication {
         
            }
 	
-//    @LoadBalanced
+   @LoadBalanced
 	@Bean
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();

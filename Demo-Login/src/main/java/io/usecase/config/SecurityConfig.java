@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests().antMatchers("/bank/user/authentication","/bank/user/dashboard/accountInfo",
-        		"/bank/user/dashboard/transactions","/bank/user/rewards/**","/session","/bank/user/authentication/")
+        		"/bank/user/dashboard/transactions","/bank/user/rewards/**","/session","/bank/user/authentication/","/user/deactiveSession")
                 .permitAll().anyRequest().authenticated()
                 .and().exceptionHandling().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

@@ -17,23 +17,21 @@ public class DemoLogoffController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	@DeleteMapping("/bank/user/authentication")
-	public LogoffResponse logoffUser(String sessionID) {
+	@DeleteMapping("/bank/user/authentication/{sessionID}")
+	public LogoffResponse logoffUser(@PathVariable String sessionID) {
 		System.out.println("inside log off");
 		 //session = RequestContextHolder.currentRequestAttributes().getSessionId();
 
 		HashMap<String, String> params = new HashMap<>();
 		params.put("id", sessionID);
 		try {
-			restTemplate.put("http://demo-database/user/deactiveSession", params);
+			restTemplate.postForObject("http://Demo-LogIn/user/deactiveSession", params, LogoffResponse.class);//("http://localhost:9190/user/deactiveSession", params);
 			return new LogoffResponse("LogoffSuccessfull");
 		}
 		catch (Exception e) {
 			System.out.println(e);
 			return new LogoffResponse("Invalid session ID");
 		}
-		
-
 		
 	}
 	
