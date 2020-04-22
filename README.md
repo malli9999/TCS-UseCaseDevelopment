@@ -12,7 +12,7 @@
 * If the user details are incorrect, the user will get an Error Page.</br>
 * Whenever the user Login into the application, A session is generated is generated for that user.</br>
 * The session ID remains until the user logout from the system or any failue in the system.
-
+![](Images/Login.png)
 ![](Images/SessionID.png)
 
 ## Account Inforamtion
