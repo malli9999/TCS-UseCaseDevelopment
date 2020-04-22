@@ -49,7 +49,7 @@
 userName          |  Password
 -------------     |  -------------
 malli@gmail.com   | arjun
-arjun @gmail.com  | malli
+arjun@gmail.com  | malli
 
 
 6. For interacting with Api we can use the Postman application as in Screenshots above.
