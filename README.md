@@ -36,3 +36,20 @@
 ## Eureka
 * We will register all three application in the Eureka
 ![](Images/Eureka.png)
+
+
+-------------------------------------
+### Instruction to Run the Application
+1. Firstly, Download the repository, by cloning or by downlading the zip file.
+2. Import the project into you'r workspace by selecting importing existing maven project.
+3. Firstly, Run the Discover Application as every other application has registered with Eureka.
+4. Secondly, Run the Demo-Account-Information Application, Followed by Demo-Login and Demo-Logoff.
+5. Initially, we populated the database with users as follows:
+
+userName          |  Password
+-------------     |  -------------
+malli@gmail.com   | arjun
+arjun @gmail.com  | malli
+
+
+6. For interacting with Api we can use the Postman application as in Screenshots above.
